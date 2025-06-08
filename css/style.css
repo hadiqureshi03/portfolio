@@ -1,0 +1,341 @@
+/* Color Palette */
+:root {
+    /* Base grays */
+    --gray-dark: #5B5F62;
+    --gray-medium-dark: #7F7F7D;
+    --gray-medium: #939393;
+    --gray-medium-light: #ABABAB;
+    --gray-light: #C3C3C3;
+    --off-white: #DDDED8;
+    
+    /* Creative vibrant colors */
+    --neon-pink: #FF2D76;      /* Electric pink */
+    --neon-yellow: #FFE900;    /* Bright yellow */
+    --neon-green: #39FF14;     /* Electric green */
+    --neon-purple: #BC13FE;    /* Vibrant purple */
+    --neon-blue: #0CECDD;      /* Cyan/turquoise */
+    --neon-orange: #FF9E00;    /* Bright orange */
+    
+    /* UI colors */
+    --bg-dark: #2D2E32;        /* Dark charcoal */
+    --bg-medium: #4A4B50;      /* Medium gray for background */
+    --text-light: #F2F2F2;     /* Light text */
+    --card-bg: #353941;        /* Slightly lighter than background */
+    
+    /* Utility */
+    --white: #ffffff;         
+    --black: #000000;
+    --shadow-neon: 0 0 10px rgba(255,255,255,0.2), 0 0 20px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--text-light);
+    background: radial-gradient(circle at top right, var(--bg-medium) 0%, var(--bg-dark) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--neon-blue);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px rgba(255, 45, 118, 0.5);
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--neon-pink);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 45, 118, 0.4);
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(255, 45, 118, 0.6);
+    background-color: #ff1a66; /* Slightly darker pink */
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(45, 46, 50, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--neon-blue);
+    backdrop-filter: blur(10px);
+    padding: 0 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    font-family: 'Audiowide', cursive;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: var(--neon-blue);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(12, 236, 221, 0.5);
+    position: relative;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--neon-blue);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    padding: 8px 12px;
+    position: relative;
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, var(--bg-dark) 100%);
+}
+
+.hero h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects h2 {
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--text-light);
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.projects h2:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 40px;
+}
+
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(45, 46, 50, 0.98);
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 12px 15px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 1.1rem;
+        border-left: 2px solid transparent;
+    }
+
+    .nav-links a.active {
+        background-color: rgba(12, 236, 221, 0.1);
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
