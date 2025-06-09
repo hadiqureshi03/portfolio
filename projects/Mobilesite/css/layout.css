@@ -1,0 +1,122 @@
+img {
+  width: 100%;
+}
+
+dt {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 390px) {
+  /* index */
+  section.grid_2-1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  section.grid_1-1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  /* min_computer */
+  .grid_1-1 {
+    display: flex;
+  }
+
+  /* operativesystemer */
+  .grid_5-3 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .grid_2-3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid_3-2 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "text image";
+  }
+
+  .order {
+    grid-area: text;
+  }
+
+  .grid_3-2 img {
+    grid-area: image;
+  }
+
+  /* komponenter */
+  .grid_1-1-1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid_1-1-1 .flex_col {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .grid_1-1-1 .flex_col img {
+    width: auto;
+    height: 200px;
+  }
+  /* Galleri */
+  .grid_1-1 > .col:not(h2) {
+    max-width: 65ch;
+  }
+
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+      "apple-84 apple-84 code desktop"
+      "apple-84 apple-84  intel-chip intel-chip"
+      "keyboard macbook macbook macbook";
+  }
+
+  .grid_1-1-1-1 > img {
+    height: 200px;
+  }
+
+  .grid_1-1-1-1 > img:first-child {
+    grid-area: apple-84;
+    height: 420px;
+  }
+
+  .grid_1-1-1-1 > img:nth-child(2) {
+    grid-area: code;
+  }
+
+  .grid_1-1-1-1 > img:nth-child(3) {
+    grid-area: desktop;
+  }
+
+  .grid_1-1-1-1 > img:nth-child(4) {
+    grid-area: intel-chip;
+  }
+
+  .grid_1-1-1-1 > img:nth-child(5) {
+    grid-area: keyboard;
+  }
+
+  .grid_1-1-1-1 > img:last-child {
+    grid-area: macbook;
+  }
+
+  .col {
+    margin: 10px;
+  }
+}

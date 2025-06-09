@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./assets/img/flight.svg" alt="Logo" /></a>
+        </div>
+        
+        <!-- Hidden checkbox for menu toggle -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Label for the checkbox - using spans instead of divs -->
+        <label for="menu-toggle" class="burger">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </label>
+        
+        <nav>
+            <ul>
+                <li><a href="flyforsinkelser.html">Flyforsinkelser</a></li>
+                <li><a href="om-os.html">Om os</a></li>
+                <li><a href="flykompensation.html">Ansøg</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero section with image, text and button -->
+    <section class="hero homepage">
+        <div class="hero-content">
+            <h1>Forsinket fly?</h1>
+            <p>
+              Hos Flight Assistance tager vi kampen op mod flyselskaberne på dine vegne -
+              helt uden omkostninger for dig
+            </p>
+            <a href="flykompensation.html" class="cta-button">Søg kompensation</a>
+        </div>
+    </section>
+</body>
+</html>

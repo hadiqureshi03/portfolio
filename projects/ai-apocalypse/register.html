@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/infographic.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <title>Emergency Site</title>
+  </head>
+  <body id="register">
+    <header>
+      <nav>
+        <div id="logotype-wrapper">
+          <a href="index.html"> LOGOTYPE </a>
+        </div>
+        <ul class="menu">
+          <li><a class="menuItem" href="latestnews.html">Læs seneste nyhed</a></li>
+          <li><a class="menuItem" href="register.html">Indberet</a></li>
+          <li>
+            <div id="darkModeToggle" class="toggle-switch" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle dark mode">
+              <div class="toggle-knob">
+                  <span class="toggle-icon sun-icon">☀️</span>
+                  <span class="toggle-icon moon-icon">🌙</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section id="form-section">
+        <article id="form-info">
+          <h2>INDBERET</h2>
+          <p>Oplevet AI-misbrug?
+            Hvis du har været udsat for AI-manipulation, falske identiteter, identitetstyveri (f.eks. deepfakes eller stemmekloning) eller AI-genereret misinformation, bør du overveje at ansøge. Udfyld formularen for at komme i gang.
+          </p>
+        </article>
+        <form id="webform" action="#" onsubmit="return submitForm(this)">
+          <label for="name">Navn</label>
+          <input type="text" id="name" name="name" placeholder="Indtast navn" required />
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Indtast e-mail" required />
+          <label for="phone">Telefonnummer</label>
+          <input type="tel" id="phone" name="phone" placeholder="Indtast telefonnummer" required />
+          <label for="message">Besked</label>
+          <select id="issue-type">
+            <option value="1">Vælg en mulighed</option>
+            <option value="Autonom Manipulation">Autonom Manipulation</option>
+            <option value="Digitale Phantom Entities">Digitale Phantom Entities</option>
+            <option value="Identitetssvindel">Identitetssvindel</option>
+            <option value="AI-propaganda">AI-propaganda</option>
+          </select>
+          <textarea id="message" name="message" rows="4" cols="50"></textarea>
+          <button type="submit">Indsend</button>
+        </form>
+      </section>
+      
+      <section id="form-summary">
+        <div class="card-container">
+          <!-- Front side with image -->
+          <div class="card-front">
+            <img src="img/postbox.jpg" alt="postbox" class="summary-image">
+          </div>
+          
+          <!-- Back side with summary -->
+          <div class="card-back">
+            <h2>Summary</h2>
+            <article>
+              <p class="placeholder">Opsummering</p>
+              <div id="summary-content"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

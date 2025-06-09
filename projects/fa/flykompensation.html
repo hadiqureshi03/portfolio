@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./assets/img/flight.svg" alt="Logo" /></a>
+        </div>
+        
+        <!-- Hidden checkbox for menu toggle -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Label for the checkbox - this is what gets clicked -->
+        <label for="menu-toggle" class="burger">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </label>
+        
+        <nav>
+            <ul>
+                <li><a href="flyforsinkelser.html">Flyforsinkelser</a></li>
+                <li><a href="om-os.html">Om os</a></li>
+                <li><a href="flykompensation.html">Ansøg</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero section with image, text and button -->
+    <section class="hero apply">
+        <div class="hero-content">
+            <h1>Flyforsinkelser</h1>
+            <p>Vidste du, at du kan få kompensation for en sag op til 3 år efter flyforstyrrelsen tog sted?</p>
+        </div>
+    </section>
+    
+    <!-- Content section -->
+    <section class="content-section apply">
+        <div class="apply-header">
+          <h2>Ansøgningsskema</h2>
+          <p>Udfyld nedenstående skema, for en uforpligtende vurdering af din sag!</p>
+        </div>
+        <form class="apply-form">
+          <div class="form-row">
+              <div class="form-group name-fields">
+                  <label for="firstName">Fulde navn</label>
+                  <input type="text" id="firstName" name="firstName">
+              </div>
+              
+              <div class="form-group name-fields">
+                  <label for="phone">Telefon nummer</label>
+                  <input type="tel" id="phone" name="phone">
+              </div>
+              
+              <div class="form-group email-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email">
+              </div>
+          </div>
+          
+          <div class="button-container">
+              <button type="submit">Submit</button>
+          </div>
+      </form>
+    </section>
+</body>
+</html>

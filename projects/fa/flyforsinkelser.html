@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./assets/img/flight.svg" alt="Logo" /></a>
+        </div>
+        
+        <!-- Hidden checkbox for menu toggle -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Label for the checkbox - this is what gets clicked -->
+        <label for="menu-toggle" class="burger">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </label>
+        
+        <nav>
+            <ul>
+                <li><a href="flyforsinkelser.html">Flyforsinkelser</a></li>
+                <li><a href="om-os.html">Om os</a></li>
+                <li><a href="flykompensation.html">Ansøg</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero section with image, text and button -->
+    <section class="hero delays">
+        <div class="hero-content">
+            <h1>Flyforsinkelser</h1>
+            <p>Vidste du, at du kan få kompensation for en sag op til 3 år efter flyforstyrrelsen tog sted?</p>
+            <a href="flykompensation.html" class="cta-button">Søg kompensation</a>
+        </div>
+    </section>
+    
+    <!-- Content section -->
+    <section class="content-section delays">
+        <div class="card">
+            <h3>Hvem er dækket af EU forordningen §261/04?</h3>
+            <p>Gælder for flyrejser inden for EU, samt flyvninger der afgår fra eller ankommer til EU med et EU-baseret flyselskab.</p>
+            <div class="bodyText">Forordningen dækker også passagerer, der har billet til en forsinket eller aflyst flyvning, samt de, der oplever overbooking på deres fly.</div>
+        </div>
+        <div class="card">
+            <h3>Hvornår har du ret til kompensation?</h3>
+            <p>EU Forordning 261/04 giver passagerer ret til kompensation i flere situationer, hvis deres flyrejse bliver påvirket. Dette inkluderer.</p>
+            <div class="bodyText">
+                <ul>
+                    <li>
+                        Ved forsinkelse på 3 timer eller mere ved ankomst.
+                    </li>
+                    <li>
+                        Ved aflysning mindre end 14 dage før afrejse.
+
+                    </li>
+                    <li>
+                        Ved boardingafvisning pga. overbooking.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Hvor meget kan du få i kompensation?</h3>
+            <p>Størrelsen på kompensationen afhænger af flyvningens længde og forsinkelsens omstændigheder. Ifølge EU Forordning 261/04 kan du få følgende kompensation.</p>
+            <div class="bodyText">
+                <ul>
+                    <li>
+                        250 € for flyvninger op til 1.500 km.
+                    </li>
+                    <li>
+                        400 € for flyvninger mellem 1.500 og 3.500 km.
+                    </li>
+                    <li>
+                        600 € for flyvninger over 3.500 km (uden for EU).
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Hvornår gælder kompensationen ikke?</h3>
+            <p>Kompensationen gælder ikke, hvis forsinkelsen eller aflysningen skyldes ekstraordinære omstændigheder, som er uden for flyselskabets kontrol.</p>
+            <div class="bodyText">
+                Dette kan inkludere situationer som dårligt vejr, strejker, politiske uroligheder eller sikkerhedstrusler.   
+            </div>
+        </div>
+    </section>
+</body>
+</html>
