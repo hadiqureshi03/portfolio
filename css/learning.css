@@ -1,0 +1,274 @@
+.learning-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.learning-section {
+    margin-bottom: 30px;
+}
+
+.learning-section h2 {
+    font-family: 'Audiowide', cursive;
+    color: var(--neon-blue);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.learning-section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to bottom, var(--neon-blue), var(--neon-green));
+    border-radius: 3px;
+}
+
+.learning-section h3 {
+    color: var(--neon-pink);
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.learning-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.learning-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.learning-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.learning-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(12, 236, 221, 0.4);
+}
+
+.learning-image figcaption {
+    margin-top: 12px;
+    color: var(--gray-medium-light);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Code snippet styling */
+.code-snippet {
+    background-color: rgba(20, 20, 30, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.code-snippet code {
+    font-family: 'Courier New', monospace;
+    color: var(--text-light);
+    display: block;
+    line-height: 1.5;
+    white-space: pre;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.code-snippet .property {
+    color: var(--neon-blue);
+}
+
+
+.code-snippet .selector {
+    color: var(--neon-pink);
+}
+
+.code-snippet .value {
+    color: var(--neon-green);
+}
+
+.code-snippet .comment {
+    color: var(--gray-medium-light);
+    font-style: italic;
+}
+
+.code-snippet::before {
+    content: attr(data-language, 'CSS');
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: var(--neon-green);
+    color: var(--bg-dark);
+    padding: 0 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.learning-section ul,
+.learning-section ol {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.learning-section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+@media (max-width: 375px) {
+    .learning-section ul,
+    .learning-section ol {
+        padding-left: 15px;
+    }
+    
+    .learning-section li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+.action-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.action-button .btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+blockquote {
+    border-left: 4px solid var(--neon-blue);
+    padding: 15px 20px;
+    margin: 20px 0;
+    background-color: rgba(12, 236, 221, 0.05);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+blockquote.warning {
+    border-left-color: var(--neon-pink);
+    background-color: rgba(255, 45, 118, 0.05);
+}
+
+blockquote.tip {
+    border-left-color: var(--neon-green);
+    background-color: rgba(57, 255, 20, 0.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .learning-image img {
+        width: 100%;
+    }
+    
+    .code-snippet {
+        padding: 15px;
+    }
+    
+    .learning-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .learning-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 375px) {
+    .learning-image {
+        margin: 15px -15px;
+        width: calc(100% + 30px);
+        max-width: none;
+    }
+    
+    .learning-image img {
+        border-radius: 5px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .content-container {
+        padding: 15px;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    .page-hero {
+        padding: 60px 2%;
+        overflow-x: hidden;
+    }
+    
+    .page-hero {
+        padding: 60px 3%;
+    }
+    
+    .page-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .learning-section h2 {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .learning-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .learning-section p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .code-snippet {
+        padding: 10px;
+        margin: 12px 0;
+    }
+    
+    .code-snippet code {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+    
+    .code-snippet::before {
+        font-size: 0.7rem;
+        top: 5px;
+        right: 10px;
+        padding: 0 6px;
+    }
+    
+    .action-button .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
