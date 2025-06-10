@@ -38,7 +38,100 @@
             <div class="page-content">
                 <h1>Læring fra 03 / UX-UI</h1>
                 <div class="content-container">
-                    <p>Denne side vil indeholde mine læringer og indsigter fra FA projektet.</p>
+                    <div class="learning-content">
+                        <div class="learning-section">
+                            <h2>Introduktion til UX/UI Design</h2>
+                            <p>I dette projekt har jeg udforsket principperne for UX (brugeroplevelse) og UI (brugergrænseflade) design gennem udviklingen af Flight Assistance hjemmesiden. Mit mål var at skabe en brugervenlig platform, der hjælper rejsende med at få kompensation for flyforsinkelser.</p>
+                            
+                            <p>En af de vigtigste læringer fra dette projekt var forståelsen af at brugeroplevelse går længere end bare æstetik - det handler om at skabe intuitive flows, der gør det nemt for brugeren at opnå deres mål, uanset om de bruger en computer, tablet eller mobiltelefon.</p>
+                            
+                            <h3>Brugercentreret Design Proces</h3>
+                            <p>Min tilgang til projektet fulgte en brugercentreret designproces, hvor jeg startede med at forstå brugernes behov og forventninger. Gennem research og analyse identificerede jeg de vigtigste funktioner, som skulle hjælpe brugere med at:</p>
+                            
+                            <ul>
+                                <li>Forstå deres rettigheder ved flyforsinkelser</li>
+                                <li>Nemt kunne indsende en ansøgning om kompensation</li>
+                                <li>Få adgang til information på forskellige enheder</li>
+                            </ul>
+                            
+                            <p>Denne forståelse formede udviklingen af hjemmesidens struktur og navigation, så brugerne nemt kunne finde den information, de søgte.</p>
+                            
+                            <h3>Designet af Ansøgningsformularen</h3>
+                            <p>En af de mest kritiske komponenter af hjemmesiden var ansøgningsformularen, som skulle være enkel og nem at udfylde. Dette krævede omhyggeligt design og opmærksomhed på detaljer for at minimere brugerens anstrengelse.</p>
+                            
+                            <p>Nedenfor vises den HTML-kode for ansøgningsformularen, som jeg designede med fokus på brugervenlighed og klar struktur:</p>
+                            
+                            <figure class="learning-image">
+                                <img src="images/fa-html-code-snippet.png" alt="HTML kode for ansøgningsformular" style="max-width: 100%; width: auto;" />
+                                <figcaption>HTML kode til ansøgningsformularen</figcaption>
+                            </figure>
+                            
+                            <p>I formularen ovenfor anvendte jeg flere UX-principper for at skabe en positiv brugeroplevelse:</p>
+                            
+                            <p>Jeg grupperede relaterede felter sammen for at skabe en logisk struktur og flow. Ved at opdele formularen i sektioner og give tydelige labels, gjorde jeg det nemmere for brugerne at forstå, hvilke informationer der skulle indtastes. Submit-knappen er fremhævet og placeret, så den er let at finde og aktivere.</p>
+                            
+                            <figure class="learning-image">
+                                <img src="projects/fa/assets/img/apply-background.png" alt="Flight Assistance ansøgningsside" style="max-width: 70%; width: auto;" />
+                                <figcaption>Flight Assistance ansøgningsside med brugervenligt formulardesign</figcaption>
+                            </figure>
+                            
+                            <h3>Responsivt Design</h3>
+                            <p>En central del af UX/UI design i dag er at sikre, at hjemmesiden fungerer optimalt på alle enheder. Dette krævede implementering af responsive design-principper, så brugerne får en god oplevelse uanset skærmstørrelse.</p>
+                            
+                            <p>I mit projekt implementerede jeg en mobil menu med en "burger"-knap, som er blevet standard på moderne hjemmesider. Her er CSS-koden, der styrer denne responsive adfærd:</p>
+                            
+                            <div class="code-snippet" data-language="CSS" style="font-size: 0.85rem">
+                                <code><span class="comment">/* Mobile responsive styles */</span>
+<span class="selector">@media screen and (max-width: 767px)</span> {
+  <span class="property">.burger</span> {
+    <span class="property">display</span>: <span class="value">block</span>;
+  }
+  
+  <span class="property">nav</span> {
+    <span class="property">position</span>: <span class="value">fixed</span>;
+    <span class="property">top</span>: <span class="value">0</span>;
+    <span class="property">right</span>: <span class="value">-70%</span>;
+    <span class="property">width</span>: <span class="value">70%</span>;
+    <span class="property">height</span>: <span class="value">100vh</span>;
+    <span class="property">background</span>: <span class="value">rgba(0,0,0,0.7)</span>;
+    <span class="property">transition</span>: <span class="value">0.3s</span>;
+  }
+  
+  <span class="property">#menu-toggle:checked ~ nav</span> {
+    <span class="property">right</span>: <span class="value">0</span>;
+  }
+}</code>
+                            </div>
+                            
+                            <p>Denne CSS-kode er et godt eksempel på, hvordan jeg håndterede responsivt design i projektet. Jeg brugte media queries til at definere, hvordan elementerne skulle vises på mindre skærme. Burger-menuen er skjult (-70%) indtil brugeren klikker på menu-ikonet, hvilket aktiverer en CSS-transition, der glider menuen ind i visningen.</p>
+                            
+                            <p>Dette giver en bedre brugeroplevelse på mobile enheder, hvor skærmplads er begrænset, og det ville være upålideligt at vise en fuld navigationsmenu.</p>
+                            
+                            <figure class="learning-image">
+                                <img src="projects/fa/assets/img/homepage-background.jpg" alt="Flight Assistance hjemmeside" style="max-height: 450px; object-fit: contain;" />
+                                <figcaption>Flight Assistance hjemmeside med fokus på brugervenligt UI design</figcaption>
+                            </figure>
+                            
+                            <h3>Visuel Hierarki og Typografi</h3>
+                            <p>Et andet vigtigt aspekt af UX/UI design, som jeg lærte gennem dette projekt, var betydningen af ​​visuel hierarki. Gennem bevidst brug af farver, typografi og placering af elementer skabte jeg en intuitiv oplevelse, der ledede brugernes opmærksomhed mod de vigtigste handlinger og informationer.</p>
+                            
+                            <p>Jeg valgte en typografi, der var let at læse på skærme af forskellige størrelser og sikrede tilstrækkelig kontrast mellem tekst og baggrund for at forbedre læsbarheden. Dette er særligt vigtigt for tilgængelighed og for at sikre, at alle brugere, uanset deres evner, kan interagere effektivt med hjemmesiden.</p>
+                            
+                            <h3>Interaktionsdesign</h3>
+                            <p>Et vigtigt fokusområde var interaktionsdesignet - hvordan brugerne interagerer med hjemmesiden og får feedback på deres handlinger. Jeg implementerede hover-effekter, fokustilstande og animationer for at give brugerne visuelle signaler om, at deres handlinger blev registreret.</p>
+                            
+                            <p>For eksempel, når en bruger fører musen hen over en knap, ændrer knappen udseende for at indikere, at den kan klikkes på. Dette er en subtil, men vigtig del af at skabe en intuitiv og reaktionsvillig brugergrænseflade.</p>
+                            
+                            <h3>Konklusion</h3>
+                            <p>Dette projekt gav mig værdifuld erfaring med UX/UI designprincipper og praksis. Jeg lærte, at et effektivt design ikke kun handler om æstetik, men også om at skabe en intuitive, tilgængelige og engagerende oplevelser, der hjælper brugerne med at opnå deres mål.</p>
+                            
+                            <p>De færdigheder og principper, jeg har tilegnet mig gennem dette projekt, danner et solidt grundlag for mit fremtidige arbejde inden for digitalt design og udvikling. Jeg har nu en dybere forståelse af, hvordan man skaber digitale produkter, der ikke kun ser godt ud, men også fungerer godt for brugerne.</p>
+                        </div>
+                        
+                        <div class="action-button">
+                            <a href="projects/fa/index.html" class="btn">Se projektet</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -49,13 +49,11 @@
 
 .learning-image img {
     max-width: 100%;
-    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    object-fit: cover;
 }
 
 .learning-image img:hover {
@@ -215,20 +213,21 @@ blockquote.tip {
         max-width: 100%;
         width: 100%;
     }
-    
+
     .content-container {
         padding: 15px;
         margin: 0;
+        border-radius: 10px;
         overflow-x: hidden;
+    }
+    
+    .learning-content {
+        gap: 20px;
     }
     
     .page-hero {
         padding: 60px 2%;
         overflow-x: hidden;
-    }
-    
-    .page-hero {
-        padding: 60px 3%;
     }
     
     .page-content h1 {
@@ -243,21 +242,35 @@ blockquote.tip {
     
     .learning-section h3 {
         font-size: 1.1rem;
+        margin-top: 20px;
     }
     
     .learning-section p {
         font-size: 0.9rem;
         line-height: 1.6;
+        margin-bottom: 15px;
     }
+    
+    /* .learning-section ul,
+    .learning-section ol {
+        padding-left: 15px;
+    }
+    
+    .learning-section li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    } */
     
     .code-snippet {
         padding: 10px;
         margin: 12px 0;
+        font-size: 0.85rem;
     }
     
     .code-snippet code {
         font-size: 0.75rem;
         line-height: 1.4;
+        padding-bottom: 8px;
     }
     
     .code-snippet::before {
