@@ -38,7 +38,100 @@
             <div class="page-content">
                 <h1>Læring fra 04 / Animation</h1>
                 <div class="content-container">
-                    <p>Denne side vil indeholde mine læringer og indsigter fra AI Apocalypse projektet.</p>
+                    <div class="learning-content">
+                        <div class="learning-section">
+                            <h2>JavaScript Interaktivitet & Animation</h2>
+                            <p>I dette projekt udforskede jeg, hvordan avanceret JavaScript kan bruges til at skabe interaktive weboplevelser. AI Apocalypse-projektet fokuserede på at informere om risici ved kunstig intelligens gennem en engagerende brugeroplevelse med interaktive elementer og animationer.</p>
+                            <p>En væsentlig del af læringen i dette projekt var at implementere animationer og overgange, der ikke bare gjorde hjemmesiden mere visuelt tiltalende, men som også forbedrede brugerengagementet og formidlingen af information.</p>
+
+                            <h3>Formular med Flip-Animation</h3>
+                            <p>En af de centrale JavaScript-funktioner, jeg implementerede, var en interaktiv formular med en "flip-effekt". Når brugeren udfylder og indsender formularen, drejer kortet for at vise en sammenfatning af de indtastede oplysninger. Dette gav ikke kun en tilfredsstillende visuel feedback, men forbedrede også brugeroplevelsen ved at bekræfte, at deres information var blevet registreret.</p>
+                            <p>Her er den centrale JavaScript-funktion, der håndterer formular-indsendelse og skaber flip-animationen:</p>
+                            
+                            <figure class="learning-image">
+                                <img src="images/ai-js-code-snippet-1.png" alt="HTML kode for ansøgningsformular" style="max-width: 70%; width: auto;" />
+                                <figcaption>Javascript kode til submitForm()</figcaption>
+                            </figure>
+                            
+                            <p>Denne kode viser flere avancerede JavaScript-koncepter:</p>
+                            
+                            <ul>
+                                <li><strong>DOM Manipulation</strong>: Ændring af HTML-indhold dynamisk baseret på brugerinput</li>
+                                <li><strong>Template Literals</strong>: Brug af ES6 template strings til at opbygge HTML-struktur med variabler</li>
+                                <li><strong>Event Handling</strong>: Forhindring af standardformularadfærd og triggering af brugerdefinerede handlinger</li>
+                                <li><strong>CSS-klassemanipulation</strong>: Tilføjelse af klasser for at udløse CSS-animationer</li>
+                            </ul>
+                            
+                            <p>For at opnå flip-effekten kombinerede jeg JavaScript med CSS-transformationer. Her er et udsnit af den tilsvarende CSS:</p>
+                            
+                            <div class="code-snippet" data-language="CSS">
+                                <code><span class="selector">.card-container</span> {
+  <span class="property">perspective</span>: <span class="value">1000px</span>;
+  <span class="property">transition</span>: <span class="value">transform 0.8s</span>;
+  <span class="property">transform-style</span>: <span class="value">preserve-3d</span>;
+}
+
+<span class="selector">.card-front, .card-back</span> {
+  <span class="property">position</span>: <span class="value">absolute</span>;
+  <span class="property">width</span>: <span class="value">100%</span>;
+  <span class="property">height</span>: <span class="value">100%</span>;
+  <span class="property">backface-visibility</span>: <span class="value">hidden</span>;
+}
+
+<span class="selector">.card-back</span> {
+  <span class="property">transform</span>: <span class="value">rotateY(180deg)</span>;
+}
+
+<span class="selector">.card-container.flipped</span> {
+  <span class="property">transform</span>: <span class="value">rotateY(180deg)</span>;
+}</code>
+                            </div>
+                            
+                            <h3>Lys/Mørk Tematilstand (Dark Mode)</h3>
+                            <p>En anden vigtig JavaScript-funktionalitet i projektet var implementeringen af en tema-skifter, der gav brugerne mulighed for at vælge mellem lys og mørk visning af hjemmesiden. Dette forbedrede ikke kun tilgængeligheden, men gav også en personaliseret brugeroplevelse.</p>
+                            <p>Her er JavaScript-koden, der håndterer toggle-funktionaliteten for mørk/lys tilstand:</p>
+                            
+                            <figure class="learning-image">
+                                <img src="images/ai-js-code-snippet-2.png" alt="HTML kode for ansøgningsformular" style="max-width: 70%; width: auto;" />
+                                <figcaption>Javascript kode til at skifte mellem lys og mørk tilstand</figcaption>
+                            </figure>
+                            
+                            <p>Denne kode viser flere vigtige JavaScript-koncepter:</p>
+                            
+                            <ul>
+                                <li><strong>Event Listeners</strong>: Håndtering af både klik- og tastaturbegivenheder for tilgængelighed</li>
+                                <li><strong>Feature Detection</strong>: Brug af try/catch til sikker feature-detektion</li>
+                                <li><strong>System Preference Detection</strong>: Brug af matchMedia() API til at detektere brugerens systemindstillinger</li>
+                                <li><strong>State Management</strong>: Opretholdelse og toggle af tilstandsværdier</li>
+                                <li><strong>ARIA-attributter</strong>: Brug af tilgængelighedsattributter for at understøtte skærmlæsere</li>
+                            </ul>
+                            
+                            <blockquote class="tip">
+                                <p>En vigtig lære var, at tilføjelse af tilgængelighedsfunktioner som tastaturnavigation og ARIA-attributter ikke kun hjælper brugere med handicap, men giver en bedre brugeroplevelse for alle.</p>
+                            </blockquote>
+                            
+                            <h3>Kombinering af Animation og Brugeroplevelse</h3>
+                            <p>I AI Apocalypse-projektet lærte jeg, hvordan animationer og interaktioner kan bruges effektivt til at understøtte indholdsformidling. Ved at bruge animationer strategisk kunne jeg:</p>
+                            
+                            <ul>
+                                <li>Styre brugerens opmærksomhed mod vigtige elementer</li>
+                                <li>Give visuel feedback på brugerhandlinger (som formularindsendelse)</li>
+                                <li>Skabe en mere engagerende og mindeværdig brugeroplevelse</li>
+                                <li>Formidle komplekse koncepter på en mere tilgængelig måde</li>
+                            </ul>
+                            
+                            <p>En vigtig læring var at finde balancen mellem et flot visuelt udtryk og god funktionalitet. For mange eller overdrevet animationer kan virke distraherende og forringe brugeroplevelsen, så alle animationer blev brugt med omtanke og et klart formål.</p>
+                            
+                            <h3>Konklusion</h3>
+                            <p>Dette projekt har givet mig værdifuld indsigt i, hvordan JavaScript kan bruges til at skabe interaktive og engagerende weboplevelser. Ved at kombinere DOM-manipulation, event handling og CSS-animationer, kunne jeg skabe en hjemmeside, der ikke blot formidlede information, men gjorde det på en visuelt tiltalende og interaktiv måde.</p>
+                            
+                            <p>De koncepter og teknikker, jeg har lært gennem udviklingen af AI Apocalypse-projektet, har givet mig et stærkt fundament for at bygge moderne, interaktive webapplikationer, der prioriterer både brugeroplevelse og tilgængelighed.</p>
+                        </div>
+                        
+                        <div class="action-button">
+                            <a href="projects/ai-apocalypse/index.html" class="btn">Se projektet</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -638,6 +638,7 @@ nav {
 .education-item h3 {
     font-size: 1.1rem;
     margin-bottom: 5px;
+    color: var(--neon-pink);
 }
 
 /* Project Learnings Page Styles */
@@ -755,10 +756,28 @@ footer::before {
 
 .social-links a:hover {
     transform: translateY(-7px);
+    background: rgba(20, 20, 30, 0.6);
 }
 
-.social-links a:hover {
-    background: rgba(20, 20, 30, 0.6);
+.social-links a:nth-child(1):hover {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px rgba(12, 236, 221, 0.6);
+    text-shadow: 0 0 5px rgba(12, 236, 221, 0.8);
+}
+
+.social-links a:nth-child(2):hover {
+    color: var(--neon-pink);
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 10px rgba(255, 45, 118, 0.6);
+    text-shadow: 0 0 5px rgba(255, 45, 118, 0.8);
+}
+
+.social-links a:nth-child(3):hover {
+    color: var(--neon-green);
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
 }
 
 
